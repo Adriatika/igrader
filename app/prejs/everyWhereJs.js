@@ -37,26 +37,24 @@ var li1 	 = document.querySelector('.sm1'),
 	var upFrom 	= document.querySelector("#pp"),
 		close 	= document.querySelector("#ppCl"),
 		popupW 	= document.querySelector(".popupWrapper"),
-		popupF 	= document.querySelector("#ppForm");
-
-			console.log(typeof(formD)) ; 
+		popupF 	= document.querySelector("#ppForm"); 
 		upFrom.onclick = function(e){
 			e.preventDefault();
-			var formD	= document.querySelector("#sp-form-118170");
+			var formD	= document.querySelector("#sp-form-127936");
 			var spWrap 	= document.querySelector(".sp-form-outer") ;
 			popupF.append(formD);
 			popupW.style.display="block";
 			popupF.style.display="block";  
 		}
 		close.onclick=function(){
-			var formD	= document.querySelector("#sp-form-118170");
+			var formD	= document.querySelector("#sp-form-127936");
 			var spWrap 	= document.querySelector(".sp-form-outer") ;
 			popupW.style.display="none";	
 			popupF.style.display="none";	
 			spWrap.appendChild(formD);
 		}
 		popupW.onclick = function(){
-			var formD	= document.querySelector("#sp-form-118170");
+			var formD	= document.querySelector("#sp-form-127936");
 			var spWrap 	= document.querySelector(".sp-form-outer") ;
 			popupW.style.display="none";
 			popupF.style.display="none";	
@@ -64,7 +62,7 @@ var li1 	 = document.querySelector('.sm1'),
 		}
 		 $(this).keydown(function(e){
 		 	if(e.which == 27){
-			var formD	= document.querySelector("#sp-form-118170");
+			var formD	= document.querySelector("#sp-form-127936");
 			var spWrap 	= document.querySelector(".sp-form-outer") ;
               		popupW.style.display="none";
 					popupF.style.display="none";	

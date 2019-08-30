@@ -2,13 +2,13 @@
 .dpHeader{
 	display:table;
 	width:100%;
-	margin: 0 auto 2em;
+	margin: 0 auto;
 	padding-bottom:10px;
-	margin-bottom: 2em;
 }
 .headerFirstPart{
-	display: table-row;
-	
+	display:flex;
+	flex-direction: row;
+	align-items: stretch;
 }
 .logo{
 	display: table-cell;
@@ -24,10 +24,14 @@
 	}
 }
 .infoBlock{
-	display: table-cell;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
 	padding-top:1em;
 	padding-left: 2.5em;
-	width:calc(71.5% - 5.5em);
+	width:100%;
+	height:100%;
+	box-sizing: border-box;
 	padding-bottom: 3px;
 	vertical-align: bottom;
 }
@@ -67,9 +71,9 @@
 @media all and(max-width: 768px){
 	.logo{
 		display: block;
-		margin:0 auto;
+		margin:0 auto 32px;
 		min-width:300px;
-		height: 60px;
+		position: relative;
 	}
 	.infoBlock{
 		float: none;
