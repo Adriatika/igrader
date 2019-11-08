@@ -1,26 +1,43 @@
 $(document).ready(function(){
-var li1 	 = document.querySelector('.sm1'),
-	li2 	 = document.querySelector('.sm2'),
-	li1A	 = li1.querySelector('a'),
-	li2A	 = li2.querySelector('a'),
-	sm1 	 = li1.querySelector('ul'),
-	sm2 	 = li2.querySelector('ul'),
-	count1 	 = 0,
-	count2	 = 0;
+	if(document.querySelector('.sm1')){
+		var li1 = document.querySelector('.sm1');
+		var sm1 = li1.querySelector('ul');
+		var li1A= li1.querySelector('a');
+		var count1 	 = 0;
+		li1A.onclick = function(e){
+			e.preventDefault();
+		}
 		li1.onclick = function(){
 			if(count1%2 == 0){
 				sm1.style.display = "block";
-				sm2.style.display = "none";
+				if(document.querySelector('.sm2')){
+					var li2 = document.querySelector('.sm2'),
+					li2A	 = li2.querySelector('a'),
+					sm2 	 = li2.querySelector('ul')
+					sm2.style.display="none";
+				}
 				count2 = 0;
 			} else{
 				sm1.style.display = "none";
 			}
 			count1++;
 		};
+	};
+	if(document.querySelector('.sm2')){
+		var li2 = document.querySelector('.sm2'),
+		li2A	 = li2.querySelector('a'),
+		sm2 	 = li2.querySelector('ul'),
+		count2	 = 0;
 		li2.onclick = function(){
 			if(count2%2 == 0){
 				sm2.style.display = "block";
-				sm1.style.display = "none";
+				if(document.querySelector('.sm1')){
+					var li1 = document.querySelector('.sm1');
+					var sm1 = li1.querySelector('ul');
+					var li1A= li1.querySelector('a');
+					sm1.style.display = "none";	
+				}
+				
 				count1 = 0;
 			} else{
 				sm2.style.display = "none";
@@ -30,9 +47,8 @@ var li1 	 = document.querySelector('.sm1'),
 		li2A.onclick = function(e){
 			e.preventDefault();
 		}
-		li1A.onclick = function(e){
-			e.preventDefault();
-		}
+	}
+	
 		/*Вырезание формы из сайдбара и врезка в всплывающий wrapper*/
 	var upFrom 	= document.querySelector("#pp"),
 		close 	= document.querySelector("#ppCl"),
