@@ -5,7 +5,7 @@
 	max-width:800px;
 	box-sizing:border-box;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-content: flex-start;
 	margin-bottom:2em;
 	&__item{
@@ -36,8 +36,16 @@
 		box-shadow: 0 0 120px 80px rgba(15,15,15,1);
 		position: absolute;
 		bottom:0;
+		width:100%;
+		max-width: 100%;
+		box-sizing: border-box;
 		&:hover{
 			color:#ffffff;
 		}
+	}
+}
+@media all and (max-width: 480px){
+	.magazine{
+		justify-content: space-around;
 	}
 }
