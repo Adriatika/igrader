@@ -4,76 +4,46 @@
 	<meta charset="UTF-8">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dprom.online</title>
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" href="font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="fontStyle.css">
 	<script src="jQuery/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-		<div class="wrapper">
-		<header class="dpHeader">
-			<div class="headerFirstPart">
-				<div class="logo">
-					<a href="index.html">
-						<img src="img/1.png" alt="Журнал Добывающая промышленность">
-					</a>
+	<header class="graderHeader marginPlus">
+			<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand"><i class="fa  fa-info"></i>Grader</a>
 				</div>
-				<div class="infoBlock">
-					<div class="tie">
-						<span class="tie__phone">
-							<svg class="tie__icon">
-								<use xlink:href="svgsprite.svg#num"></use>
-							</svg>
-							+7 (391) 237 - 15 - 37
-						</span>
-						<div class="formWrapper">
-							<input type="checkbox" id="formVision" class="tie__formVision">
-							<form id="searchform" role="search" method="get" class="tie__search">
-								<input type="text" id="searchText" class="tie__searchText"  tabindex="1" placeholder="поиск">
-								<button id="searchsubmit" class="searchSubmit">
-									<svg class="searchSubmit__icon">
-									<use xlink:href="svgsprite.svg#searchIcon"></use>
-									</svg>
-								</button>
-							</form>
-						</div>
-					</div>
-					<div class="menu">
-						<label for="menuCheck" class="menu__label">
-							<svg>
-								<use xlink:href="svgsprite.svg#burgerMenu"></use>
-							</svg>
-						</label>
-						<input type="checkbox" class="menu__check" id="menuCheck">
-						<ul class="heading">
-							<li class="current-menu-item"><a href="#">Главная</a></li>
-							<li><a href="#">Архив</a></li>
-							<li><a href="#">О проекте</a></li>
-							<li><a href="post-events.html">Мероприятия</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="categoryMenu">
-					<input type="checkbox" id="lop" name="menuCheck">
-					<label for="lop">
-						<svg class="categoryMenu__svg">
-							<use xlink:href="svgsprite.svg#burgerMenu2"></use>
-						</svg>
-					</label>
-					<ul class="categoryMenu__list">
-						<li><a href="#">Золото</a></li>
-						<li><a href="#">Уголь</a></li>
-						<li><a href="#">Транспорт</a></li>
-						<li><a href="#">Металлы и руды</a></li>
-						<li><a href="#">Химия</a></li>
-						<li><a href="#">Инфо</a></li>
-						<li><a href="post-events.html">Мероприятия</a></li>
-						<li><a href="#">Нефтегаз</a></li>
-						<li><a href="#">Разведка</a></li>
-						<li><a href="#">Произвольная страница</a></li>
+		    	<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#">О журнале</a></li>
+						<li><a href="single.html">Новости</a></li>
+						<li><a href="#">Архив</a></li>
+						<li><a href="#">круто длинно и т.д.</a></li>
+						<li><a href="#">задрали правки</a></li>
+						<li><span><i class="fa fa-eye"></i></span></li>
 					</ul>
 				</div>
 			</div>
+		</div>
+		<div class="graderLogo col-lg-12 text-center">
+			<div class="container">
+				<h1 class="graderLogo__title"><a href="index.html" class="graderLogo__link">igrader</a></h1>
+				<h2 class="graderLogo__description">журнал о спецтехнике и прочих крутых штуках</h2>
+			</div>
+		</div>
 		</header>
+
+		<div class="wrapper">
+		
 		<div class="table">
 			<div class="middle-block">
 				<div class="sidebar-left">
@@ -628,6 +598,7 @@
 			</div>
 		</div>
 	</footer>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="svg4everybody.js"></script>
 	<script>svg4everybody();</script>
 	<script src="prejs/single.js"></script>

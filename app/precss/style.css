@@ -692,6 +692,9 @@ iframe {
   color: #254550;
   text-decoration: none;
 }
+.marginPlus {
+  margin-bottom: 1.5em;
+}
 .navbar {
   font-weight: 600;
   font-size: 14px;
