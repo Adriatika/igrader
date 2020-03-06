@@ -1,1 +1,85 @@
-$(document).ready(function(){if(document.querySelector(".sm1")){var e=document.querySelector(".sm1"),t=e.querySelector("ul"),l=e.querySelector("a"),o=0;l.onclick=function(e){e.preventDefault()},e.onclick=function(){if(o%2==0){if(t.style.display="block",document.querySelector(".sm2")){var e=document.querySelector(".sm2");e.querySelector("a");e.querySelector("ul").style.display="none"}i=0}else t.style.display="none";o++}}if(document.querySelector(".sm2")){var r=document.querySelector(".sm2"),c=r.querySelector("a"),n=r.querySelector("ul"),i=0;r.onclick=function(){if(i%2==0){if(n.style.display="block",document.querySelector(".sm1")){var e=document.querySelector(".sm1"),t=e.querySelector("ul");e.querySelector("a");t.style.display="none"}o=0}else n.style.display="none";i++},c.onclick=function(e){e.preventDefault()}}var s=document.querySelector("#pp"),u=document.querySelector("#ppCl"),y=document.querySelector(".popupWrapper"),d=document.querySelector("#ppForm");s.onclick=function(e){e.preventDefault();var t=document.querySelector("#sp-form-127936");document.querySelector(".sp-form-outer");d.append(t),y.style.display="block",d.style.display="block"},u.onclick=function(){var e=document.querySelector("#sp-form-127936"),t=document.querySelector(".sp-form-outer");y.style.display="none",d.style.display="none",t.appendChild(e)},y.onclick=function(){var e=document.querySelector("#sp-form-127936"),t=document.querySelector(".sp-form-outer");y.style.display="none",d.style.display="none",t.appendChild(e)},$(this).keydown(function(e){if(27==e.which){var t=document.querySelector("#sp-form-127936"),l=document.querySelector(".sp-form-outer");y.style.display="none",d.style.display="none",l.appendChild(t)}});var p=document.querySelector("#sliderRight"),f=document.querySelector("#sliderLeft"),a=document.querySelector(".sliderAns__list"),m=document.querySelectorAll(".sliderAns__item"),q=document.querySelector(".sliderAns");if(sliderOffset=0,change=275,windowWidth=document.querySelector("html").offsetWidth,theWidth=-1700,a.style.left=0,windowWidth<=576&&480<windowWidth)change=330,theWidth=-2800;else if(windowWidth<=480)for(q.style.width="320px",q.style.margin="0 auto 1.5em",change=324,theWidth=-2800,f.style.width="35px",p.style.width="35px",p.style.right="-10px",z=0;z<m.length;z++)m[z].style.margin="0 35px 0 35px";p.onclick=function(){sliderOffset>=theWidth?(p.style.opacity=1,f.style.opacity=1,sliderOffset-=change,a.style.left=sliderOffset+"px"):p.style.opacity=.5},f.onclick=function(){sliderOffset<0?(p.style.opacity=1,f.style.opacity=1,sliderOffset+=change,a.style.left=sliderOffset+"px"):f.style.opacity=.5}});
+		/*Вырезание формы из сайдбара и врезка в всплывающий wrapper*/
+	var upFrom 	= document.querySelector("#pp"),
+		close 	= document.querySelector("#ppCl"),
+		popupW 	= document.querySelector(".popupWrapper"),
+		popupF 	= document.querySelector("#ppForm"); 
+		upFrom.onclick = function(e){
+			e.preventDefault();
+			var formD	= document.querySelector("#sp-form-127936");
+			var spWrap 	= document.querySelector(".sp-form-outer") ;
+			popupF.append(formD);
+			popupW.style.display="block";
+			popupF.style.display="block";  
+		}
+		close.onclick=function(){
+			var formD	= document.querySelector("#sp-form-127936");
+			var spWrap 	= document.querySelector(".sp-form-outer") ;
+			popupW.style.display="none";	
+			popupF.style.display="none";	
+			spWrap.appendChild(formD);
+		}
+		popupW.onclick = function(){
+			var formD	= document.querySelector("#sp-form-127936");
+			var spWrap 	= document.querySelector(".sp-form-outer") ;
+			popupW.style.display="none";
+			popupF.style.display="none";	
+			spWrap.appendChild(formD);		
+		}
+		 $(this).keydown(function(e){
+		 	if(e.which == 27){
+			var formD	= document.querySelector("#sp-form-127936");
+			var spWrap 	= document.querySelector(".sp-form-outer") ;
+              		popupW.style.display="none";
+					popupF.style.display="none";	
+					spWrap.appendChild(formD);
+				}
+     			});
+		 var rightArrow = document.querySelector('#sliderRight'),
+		 	leftArrow 	= document.querySelector('#sliderLeft') ,
+		 	sliderList 	= document.querySelector('.sliderAns__list'),
+		 	sliderItems = document.querySelectorAll('.sliderAns__item'),
+		 	divSlide 	= document.querySelector(".sliderAns");
+		 	sliderOffset  = 0,
+		 	change 		=275, 
+		 	windowWidth = document.querySelector('html').offsetWidth,
+		 	theWidth = -1700;
+		 	sliderList.style.left =0;
+		 	if(windowWidth<=576 && windowWidth>480){
+		 		change = 330;
+		 		theWidth = -2800;
+		 	}else if(windowWidth<=480){
+		 			divSlide.style.width="320px";
+		 			divSlide.style.margin="0 auto 1.5em";
+		 			change = 324;	
+		 			theWidth = -2800;
+		 			leftArrow.style.width="35px";
+		 			rightArrow.style.width="35px";
+		 			rightArrow.style.right="-10px";
+		 			for(z = 0; z<sliderItems.length; z++){
+		 				sliderItems[z].style.margin="0 35px 0 35px";
+
+		 			}
+		 		}
+		 	
+		 	rightArrow.onclick = function(){
+		 		if(sliderOffset >= theWidth){
+		 			rightArrow.style.opacity = 1;	
+		 			leftArrow.style.opacity = 1;	 			
+		 			sliderOffset = sliderOffset - change;
+		 			sliderList.style.left = sliderOffset+'px';
+		 	}else{
+		 		rightArrow.style.opacity = 0.5;
+		 	}
+		 	}
+		 	leftArrow.onclick = function(){
+		 		if(sliderOffset < 0){
+		 			rightArrow.style.opacity = 1;
+		 			leftArrow.style.opacity = 1;
+			 		sliderOffset = sliderOffset + change;
+			 		sliderList.style.left = sliderOffset+'px';
+		 	}else{
+		 		leftArrow.style.opacity = 0.5;
+		 	}
+		 	}
+
+	});

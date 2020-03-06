@@ -1,1 +1,31 @@
-$(document).ready(function(){$(".singleArticle");var o=$(".singleArticle").outerHeight(),e=$("#upArrow"),l=$("main").outerHeight(),n=$(".dpHeader").outerHeight()+32+l,t=3500<o?o+400:o;console.log("x = "+t),$(window).scroll(function(){350<=$(window).scrollTop()&&$(window).scrollTop()<t?e.fadeIn(750):e.fadeOut(0)}),e.on("click",function(o){var e=.2*n;console.log(e),o.preventDefault(),$("html, body").animate({scrollTop:0},e)})});
+
+$(document).ready(function(){
+	var article 		= $('.singleArticle');
+	var articleHeight 	= $('.singleArticle').outerHeight();//высота статьи
+	var up 				= $('#upArrow');// поиск элемента\кнопки "вверх"
+	var mainHeight		= $('main').outerHeight();
+	var headerHeight	= $('.dpHeader').outerHeight()+32;
+	var allHeight		= headerHeight + mainHeight;
+	var x = (articleHeight>3500)? (articleHeight+400):articleHeight;
+	console.log("x = "+x);
+	$(window).scroll(function(){
+		//Start upArrow
+		if(($(window).scrollTop() >= 350) && ($(window).scrollTop()< x)){
+			up.fadeIn(750);
+			}
+			else{
+				up.fadeOut(0);
+			}
+		});
+	up.on('click', function(e){
+			var kff = allHeight*0.2;
+			console.log(kff);
+			e.preventDefault();
+			$('html, body').animate({scrollTop:0}, kff);
+	});
+		//End upArrow
+
+
+	});
+	
+

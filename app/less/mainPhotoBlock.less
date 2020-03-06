@@ -1,0 +1,28 @@
+@import "vars.less";
+.mainPhotoBlock{
+	margin-bottom: 1.5em;
+	&__anchor{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__row{
+		margin-bottom: 0.5em;
+	}
+	&__date, &__heading{
+		font-size: 12px;
+		color:#666;
+		text-transform: lowercase;
+	}
+	&__title{
+		font-size: 22px;
+		line-height: 30px;
+		font-weight: 800;
+		margin-bottom:0.5em;
+	}
+}
+@media all and(max-width:768px){
+	.mainPhotoBlock{
+		margin-bottom: 2em;
+	}
+}

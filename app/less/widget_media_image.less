@@ -1,7 +1,7 @@
 @import "vars.less";
 .widget_media_image{
 	display: block;
-	width:252px;
+	width:250px;
 	box-sizing: border-box;
 	margin-bottom:1.5em;
 	border:1px solid @bordersColor;
@@ -14,11 +14,15 @@
 		}
 	}
 }
-@media all and(max-width: 960px){
-	.widget_media_image{
-		margin-bottom: 2.5em;
-		width:252px;
-		display: inline-block;
-		margin-right:1.5em;
+@media all and(max-width:992px){
+	.sidebar__block{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		& .widget_media_image{
+			margin-left:0.5em;
+			margin-right: 0.5em;
+		}
 	}
 }
