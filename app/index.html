@@ -14,6 +14,13 @@
 </head>
 <body>	
 	<header class="graderHeader">
+		<div class="formWrapper">
+			<form id="searchform" role="search" method="get" class="searchform" action="https://igrader.ru/">
+				<span><i class="fa fa-close closeForm"></i></span>
+				<input type="text" id="s" name="s" class="searchform__text" tabindex="1" placeholder="Что ищем?" >
+				<button id="searchsubmit" class="searchform__btn">поиск</button>
+			</form>
+		</div>
 			<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -22,16 +29,24 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="#" class="navbar-brand"><i class="fa  fa-info"></i>Grader</a>
+					<span class="navbar-brand searchIcon" id="srchIcn"><i class="fa  fa-search"></i></span>
 				</div>
 		    	<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav">
 						<li class="active"><a href="#">О журнале</a></li>
 						<li><a href="single.html">Новости</a></li>
 						<li><a href="#">Архив</a></li>
-						<li><a href="#">круто длинно и т.д.</a></li>
+						<li class="dropdown" >
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">круто длинно и т.д.
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+						       <li><a href="#">Ссылка</a></li>
+						       <li><a href="#">Ссылка</a></li>
+						       <li><a href="#">Ссылка</a></li>
+						    </ul>
+						</li>
 						<li><a href="#">задрали правки</a></li>
-						<li><span><i class="fa fa-eye"></i></span></li>
 					</ul>
 				</div>
 			</div>
@@ -508,7 +523,6 @@
 			</div>
 		</div>
 	</footer>
-	<script src="js/unitMoving.js" type="text/javascript"></script>
 	<script src="js/svg4everybody.js" type="text/javascript" ></script>
 	<script src="prejs/everyWhereJs.js" type="text/javascript"></script>
 	<script>svg4everybody();</script>

@@ -518,44 +518,96 @@ iframe {
   color: #06232c;
 }
 
-.tie__formVision {
+.formWrapper {
   display: none;
+  width: 100vw;
+  height: 100vh;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 5000;
 }
-.tie__search {
-  height: 1.5em;
-  vertical-align: middle;
+.searchform {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 300px;
+  width: 50%;
+  height: 8%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
 }
-.tie__searchText {
-  height: 1.1em;
-  vertical-align: middle;
+.searchform__text {
+  padding: 10px;
+  min-width: 250px;
+  -webkit-box-flex: 6;
+  -webkit-flex-grow: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
+  width: 50%;
   border: none;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #abb7bb;
-  color: #73868d;
-  font-size: 0.9em;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  margin-right: 2px;
+  font-size: 20px;
 }
-.searchSubmit {
+.searchform__text::-webkit-input-placeholder {
+  text-transform: uppercase;
+  color: #24363c;
+}
+.searchform__text::-moz-placeholder {
+  text-transform: uppercase;
+  color: #24363c;
+}
+.searchform__text:-moz-placeholder {
+  text-transform: uppercase;
+  color: #24363c;
+}
+.searchform__text:-ms-input-placeholder {
+  text-transform: uppercase;
+  color: #24363c;
+}
+.searchform__btn {
   border: none;
-  vertical-align: middle;
-  background: none;
+  background-color: #24363c;
+  color: #fff;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  text-transform: uppercase;
+}
+.searchform__btn:hover {
+  background-color: #2e444c;
+}
+.closeForm {
+  position: absolute;
+  right: 0;
   cursor: pointer;
-  height: 1.1em;
-  width: 1.1em;
-  padding: 0;
+  top: -50px;
+  font-size: 2em;
 }
-.searchSubmit__icon {
-  padding: 0;
-  fill: #73868d;
-  width: 1em;
-  height: 1.1em;
-}
-@media all and (max-width: 960px) {
-  .formWrapper {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 1em;
-    z-index: 100;
+@media all and (max-width: 576px) {
+  .searchform {
+    height: 5%;
   }
 }
 
@@ -635,6 +687,18 @@ iframe {
 .graderLogo__description {
   color: #cccccc;
 }
+.navbar-nav > li > .dropdown-menu {
+  background-color: #24363c;
+  padding: 0;
+}
+.searchIcon {
+  cursor: pointer;
+}
+.dropdown-menu > li > a {
+  color: #ddd;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .car {
   display: -webkit-box;
   display: -webkit-flex;
@@ -657,7 +721,10 @@ iframe {
   padding: 5px 0;
 }
 .car__slide {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-left: 5px;
   width: 20%;
   min-height: 100px!important;
@@ -1367,7 +1434,7 @@ textarea:active {
   border-bottom: 1px solid rgba(74, 111, 124, 0.3);
 }
 .metaData__date {
-  font-size: 1.2em;
+  font-size: 1em;
   width: 20%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

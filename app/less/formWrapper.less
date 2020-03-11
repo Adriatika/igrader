@@ -1,42 +1,73 @@
 @import "vars.less";
-
-.tie__formVision{
-	display: none;
+.formWrapper{
+	display:none;
+	width:100vw;
+	height:100vh;
+	justify-content:space-around;
+	align-items:center;
+	position:absolute;
+	background-color:rgba(255,255,255,0.5);
+	top:0;
+	left:0;
+	z-index:5000;
 }
-.tie__search{
-	height: 1.5em;
-    vertical-align: middle;
-}
-.tie__searchText{
-	height: 1.1em;
-	vertical-align: middle;	
-	border:none;
-	padding-bottom:3px;
-	border-bottom: 1px solid lighten(@iconColor,20%);
-	color:@iconColor;
-	font-size: 0.9em;
-}
-.searchSubmit{
-	border:none;
-	vertical-align: middle;
-	background: none;
-	cursor: pointer;
-	height: 1.1em;
-	width: 1.1em;
-	padding:0;
-	&__icon{
-		padding: 0;
-		fill:@iconColor;
-		width: 1em;
-		height: 1.1em;
+.searchform{
+	display: flex;
+	flex-direction:row;
+	min-width:300px;
+	width:50%;
+	height: 8%;
+	box-sizing: border-box;
+	position: relative;
+	&__text{
+		padding:10px;
+		min-width:250px;
+		flex-grow:6;
+		width:50%;
+		border:none;
+		border-radius:10px;
+		margin-right: 2px;
+		font-size:20px;
+		&::-webkit-input-placeholder{
+			text-transform: uppercase;
+			color:#24363c;
+		}
+		&::-moz-placeholder{
+			text-transform: uppercase;
+			color:#24363c;
+		}
+		&:-moz-placeholder{
+			text-transform: uppercase;
+			color:#24363c;
+		}
+		&:-ms-input-placeholder{
+			text-transform: uppercase;
+			color:#24363c;
+		}
+	}
+	&__btn{
+		border:none;
+		background-color: #24363c;
+		color:#fff;
+		flex-grow: 1;
+		padding:10px;
+		border-radius:10px;
+		text-transform: uppercase;
+		&:hover{
+			background-color: lighten(#24363c, 5%);
+		}
 	}
 }
-@media all and(max-width: 960px){
-	.formWrapper{
-		display: block;
-		position:absolute;
-		right: 0;
-		bottom:1em;
-		z-index: 100;
+.closeForm{
+	position: absolute;
+	right:0;
+	cursor: pointer;
+	top:-50px;
+	font-size: 2em;
+}
+
+@media all and(max-width:576px){
+	.searchform{
+		height: 5%;
 	}
 }
