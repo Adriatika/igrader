@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 *{
 font-family:
-  Lato,Roboto, -apple-system,BlinkMacSystemFont,Segoe UI,   Oxygen, 
+  Roboto, -apple-system,BlinkMacSystemFont,Segoe UI,   Oxygen, 
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

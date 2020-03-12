@@ -1,0 +1,30 @@
+@import "vars.less";
+.twice{
+	&>a{
+		margin-bottom:1.5em;
+	}
+	&-info{
+		min-height:80px;
+	}
+	&-img{
+		display: block;
+		width:100%;
+		position: relative;
+		box-sizing: border-box;
+		max-width:100%;
+		padding-top:56.6%;
+		overflow: hidden;
+		&>img{
+			position: absolute;
+			top:0;
+			left:0;
+		}
+	}
+}
+@media all and(max-width: 576px){
+	.twice{
+		&-info{
+			min-height:0;
+		}
+	}
+}
