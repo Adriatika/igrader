@@ -3,12 +3,23 @@
 	box-sizing:border-box;
 	margin-bottom:2.5em;
 	z-index:200;
+	&>div{
+		width: 100%;
+		max-width: 300px;
+	}
 }
-
+.santy{
+	padding-top:4.7em;
+}
 @media all and(max-width:992px){
 	.foxyAdv{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}	
+}
+@media all and(max-width:768px){
+	.santy{
+		padding-top: 0;
+	}
 }

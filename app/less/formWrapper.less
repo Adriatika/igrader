@@ -6,7 +6,7 @@
 	justify-content:space-around;
 	align-items:center;
 	position:fixed;
-	background-color:rgba(255,255,255,0.5);
+	background-color:rgba(199,199,199,0.8);
 	top:0;
 	left:0;
 	z-index:5000;
@@ -22,6 +22,8 @@
 	&__text{
 		padding:10px;
 		min-width:250px;
+		min-height: 40px;
+		box-sizing:border-box;
 		flex-grow:6;
 		width:50%;
 		border:none;
@@ -52,6 +54,8 @@
 		flex-grow: 1;
 		padding:10px;
 		border-radius:10px;
+		min-height: 40px;
+		box-sizing:border-box;
 		text-transform: uppercase;
 		&:hover{
 			background-color: lighten(#24363c, 5%);
@@ -69,5 +73,13 @@
 @media all and(max-width:576px){
 	.searchform{
 		height: 5%;
+		&__btn{
+			padding:5px 10px 2px;
+			font-size: 16px;
+		}
+		&__text{
+			padding:5px 10px 2px;
+			font-size: 16px;
+		}
 	}
 }

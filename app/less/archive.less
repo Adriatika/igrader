@@ -17,7 +17,7 @@
 		display: block;
 		box-sizing: border-box;
 		position: relative;
-		font-size:1.4em;
+		font-size:1.6em;
 		margin-bottom: 1.5em;
 		padding-bottom: 0.3em;
 		font-weight:bold;
@@ -26,12 +26,12 @@
 		&::after{
 			display:block;
 			max-width:100%;
-			width: 100%;
+			width:100%;
 			content: '';
 			height:1px;
 			bottom:0;
 			position:absolute;
-			background-image:linear-gradient(to right, lighten(@backMenuColor,30%) 80%, transparent 100%);
+			background-color:lighten(@backMenuColor,30%);
 		}
 	}
 	&__item{
@@ -64,7 +64,7 @@
 		font-size:inherit;
 		color:inherit;
 		&:hover{
-			color:@mainHeaderColor;
+			color:@HeaderColor2;
 		}
 	}
 }

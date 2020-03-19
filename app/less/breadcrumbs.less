@@ -7,6 +7,7 @@
 	padding-bottom:1px;
 	margin-bottom: 1.5em;
 	clear: both;
+	color:rgba(115,134,141,.8);
 	& span{
 		font-size: 1em;
 		vertical-align: middle;
@@ -14,29 +15,24 @@
 		margin-right:5px;
 		display: inline-block;
 		& a{
-			color:@ArticleDate;
+			color:rgba(115,134,141,.8);
+		}
+		& a:visited{
+			color:rgba(115,134,141,.8);	
+		}
+		& a:hover{
+			color:@HeaderColor2;
 		}
 	}
 	&__separator{
 		display:inline-block;
-		position: relative;
-		content:'';
-		&:after{
-			display: block;
-			position:absolute;
-			top:-1px;
-			left:-2px;
-			width:5px;
-			height:5px;
-			content:'';
-			background-color: @ArticleDate;
-			transform: rotate(45deg);
-		}
+		content:'/';
+		
 	}
 	&__current{
 		display:inline;
-		color:darken(@ArticleDate, 50%);
-		padding-top: 4px;
+		color:rgba(115,134,141,.8);
+		padding-top: 2px;
 		padding-bottom: 1px;
 		
 	}

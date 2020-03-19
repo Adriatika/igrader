@@ -7,6 +7,7 @@
 	overflow: hidden;
 	margin-bottom: 1.5em;
 	margin-top:1.5em;
+	font-family: 'Acrobat', 'Arial', sans-serif;
 	&__mainTitle{
 		display: block;
 		width:100%;
@@ -20,15 +21,22 @@
 		& a{
 			color:@headersColor;
 		}
+		& a:hover{
+			text-decoration: none;
+		}
 	}
 	&__item{
 		display: block;
 		margin-bottom: 1.5em;
+		text-decoration: none;
 		&:hover .sidebarNews__heading{
 			color:@footerBack;
 		}
 		&:hover .sidebarNews__title{
 			color:@footerBack;
+		}
+		&:hover{
+			text-decoration: none;
 		}
 	}
 	&__heading{

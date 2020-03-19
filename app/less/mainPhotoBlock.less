@@ -5,6 +5,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		position: relative;
 	}
 	&__row{
 		margin-bottom: 0.5em;
@@ -14,15 +15,49 @@
 		color:#666;
 		text-transform: lowercase;
 	}
+	&__text{
+		font-size:16px;
+	}
 	&__title{
 		font-size: 22px;
 		line-height: 30px;
-		font-weight: 800;
-		margin-bottom:0.5em;
+		font-weight:700;
+		position: absolute;
+		bottom:0;
+		left:0;
+		max-width: 100%;
+		width:100%;
+		color:white;
+		background-color:rgba(12,12,12,0.7);
+		box-sizing: border-box;
+		padding:10px;
 	}
 }
+.mainMini{
+	margin-bottom: 1.5em;
+}
+.mainMini .img__wrapper img{
+	height: auto!important;
+}
+.mainMini__info{
+		padding-top:5px;
+		& p{
+			font-weight:800;
+			min-height:36px;
+			font-size: 16px;
+		}
+	}
+	.imgMy{
+		position: relative;
+	}
 @media all and(max-width:768px){
 	.mainPhotoBlock{
 		margin-bottom: 2em;
+	}
+	.mainMini__info{
+		color:#222222;
+		& p {
+			min-height:0;
+		}
 	}
 }

@@ -4,18 +4,27 @@
 	max-width: 100%;
 	box-sizing:border-box;
 	overflow: hidden;
-
+	margin-bottom: 2em;
 	& .navbar{
 		background-color: #24363c;
 	}
-}
+	& .navbar-brand{
+		vertical-align: middle;
+		line-height: 1.5em;
+	}
+	& .navbar-brand img{
+		display: block;
+		margin-top:-6px;
+		max-width: 100px;
+	}
 .row{
 	margin-bottom: 1.5em;
 }
+}
 .graderLogo{
-	background: url('../img/fon20-03.jpg') no-repeat 50% 50%;
+	background-color:rgba(221,229,232,1);
 	background-size:cover;
-	padding:75px 0 40px;
+	padding:0px 0 15px;
 	position: relative;
 	&::after{
 		display:block;
@@ -26,39 +35,49 @@
 		max-width: 100%;
 		height: 100%;
 		content: '';
-		
 		z-index:2; 
 	}
 	& img{
-			width:30%;
+			width:20%;
 		}
 	&__title{
-		font-size:70px;
 		text-transform: uppercase;
-		font-weight:800;
 		position: relative;
-		z-index: 3;
-		&>a{
-			color:#24363c;
-		}
-		&>a:hover{
-			text-decoration: none;
-			color:#002601;	
-		}
+		text-align: left;
+		margin-bottom: 3.5em;
+		color:#dde5e8;
 	}
 	&__description{
-		color:#cccccc;
+		display: flex;
+		font-family: 'Acrobat','Roboto', sans-serif;
+		text-align: left;
+		color:#24363c;
 	}
 }
 .navbar-nav>li>.dropdown-menu{
 	background-color:#24363c;
 	padding:0;
 }
+.navbar-inverse .navbar-nav>li>a{
+	color:#ffffff;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	color:#aaaaaa;
+}
 .searchIcon{
-	cursor: pointer;
+	position: absolute;
+	right:40px;
+	top:15px;
+	& i{
+		position: relative;
+		z-index: 100;
+		cursor:pointer;
+		font-size: 20px;
+		color:#ffffff;
+	}
 }
 .dropdown-menu>li>a{
-	color:#ddd;
+	color:#ffffff;
 	padding-top:5px;
 	padding-bottom:5px;
 }
@@ -83,13 +102,20 @@
 		}
 	}
 	&__img{
-		display: inline-block;
-		width:150px;
-		overflow: hidden;
-		background-color: #ffffff;
-		& img{
-			width: 150px;
-			max-width: none;
+		display: block;
+		position: relative;
+		width:50%;
+		box-sizing: border-box;
+		max-width:50%;
+		padding-top:26.6%;
+		overflow:hidden;
+		&>img{
+			display: block;
+			position: absolute;
+			top:0;
+			left:0;	
+			width:100%;
+			height: 100%;
 		}
 	}
 	&__linkW{
@@ -132,6 +158,11 @@
 }
 .navbar-inverse .navbar-nav>li.active>a{
 }
+@media all and(max-width: 768px){
+	.searchIcon{
+		right:60px;
+	}
+}
 @media all and(max-width:480px){
 	.car{
 		&__slide{
@@ -139,4 +170,11 @@
 			padding-right:7px;
 		}
 	}
+	.graderLogo{
+		&__title, &__description{
+			text-align: center;
+		}
+
+	}
+
 }

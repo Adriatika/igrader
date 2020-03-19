@@ -1,9 +1,17 @@
 @import "vars.less";
 .ltlPl{
+	font-family: 'Acrobat','Roboto','Arial', sans-serif;
 	&__anchor{
 		display: block;
 		background-color: rgba(36, 54, 60,0.1);
 		margin-bottom: 1.5em;
+		transition: 0.5s;
+		&:hover img{
+			filter: brightness(110%);
+		}
+		&:hover p{
+			color:#666;
+		}
 	}
 	&__wrapper{
 		display: block;
@@ -22,16 +30,18 @@
 	&__info{
 		padding:5px;
 		box-sizing: border-box;
-		min-height: 70px;
+		min-height:90px;
 		&>span{
 			font-size: 12px;
 			color:#666;
-		font-family: 'Roboto', sans-serif;
 
 		}
+		&>span.date{
+			font-size:10px;
+		}
 		&>p{
-			min-height: 50px;
-			font-family: 'Roboto', sans-serif;
+			font-family: 'Acrobat','Roboto', sans-serif;
+			color:#333;
 		}
 	}
 }

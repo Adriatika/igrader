@@ -1,5 +1,6 @@
 @import "vars.less";
 .widgettitle{
+	font-family: 'Acrobat','Arial', sans-serif;
 	max-width: 100%;
 	box-sizing: border-box;
 	font-size: @sidebarHeaders;
@@ -9,5 +10,11 @@
 	margin-bottom:0.5em;
 	& a{
 		color:@menuAColor;
+	}
+}
+@media all and(max-width: 728px){
+	.widget{
+		margin:0 auto;
+		text-align: center;
 	}
 }
