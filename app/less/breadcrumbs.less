@@ -1,6 +1,6 @@
 @import "vars.less";
 .breadcrumbs{
-	display: block;
+	display: inline-block;
 	width:100%;
 	box-sizing: border-box;
 	border-bottom:1px solid @backSidebarLi;
@@ -22,6 +22,9 @@
 		}
 		& a:hover{
 			color:@HeaderColor2;
+		}
+		&:first-of-type{
+			margin-left:0;
 		}
 	}
 	&__separator{

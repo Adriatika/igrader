@@ -1,23 +1,29 @@
 @import "vars.less";
 .sharing{
-			margin-bottom:0;
-			padding-left:0.2em;
-			clear: both;
-			& a{
-				display: inline-block;
-				background-color:@HeaderColor2;
-				width:20px;
-				height:20px;
-				padding:3px;
-				margin-right: 0.5em;
-				margin-bottom: 1em;
-				&:last-of-type{
-					margin-right:0;
-				}
-				& > svg{
-					width: 100%;
-					height: 100%;
-					fill:#ffffff;
+	display:flex;
+	flex-direction: column;
+	flex-grow: 1;
+	margin-bottom:0;
+	padding-left: 10px;
+&__wrapper{
+	display:flex;
+	flex-direction: column;
+	position:sticky;
+	align-items: flex-end;
+	top:80px;
+	}			
+	& a{
+		display: inline-block;
+		background-color:@HeaderColor2;
+		width:30px;
+		height:32px;
+		padding:3px;
+		border-radius: 3px;
+		margin-bottom: 1em;
+		& > svg{
+			width: 100%;
+			height: 100%;
+			fill:#ffffff;
 				}
 			}
 		}
@@ -25,12 +31,13 @@
 	.sharing{
 		text-align: center;
 		padding-left:0;
+		margin-bottom:2.5em;
+		&__wrapper{
+			position: static;
+			flex-direction: row;
+		}
+		& a{
+			margin-right:20px;
+		}
 	}
-}
-@media all and(max-width:320px){
-	.sharing{
-			&__explanation{
-				font-size:1.1em;
-			}
-}
 }
