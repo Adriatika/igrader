@@ -3,8 +3,22 @@
 	&__anchor{
 		display: block;
 		margin-bottom:1.5em;
+		position:relative;
 	}
-	&__date, &__heading{
+	&__heading{
+		display:inline-block;
+		padding:3px 10px;
+		box-sizing:border-box;
+		color:white!important;
+		text-transform:uppercase;
+		font-weight:700;
+		position:absolute;
+		top:0;
+		left:0;
+		background-color:#24363c;
+		z-index:2;
+	}
+	&__date{
 		font-size: 12px;
 		color:#666;
 		text-transform: lowercase;
@@ -36,7 +50,7 @@
 				background-color: rgba(0,0,0,0.5);
 			}
 		}
-		&__date, &__heading{
+		&__date{
 			color:#999999;
 		}
 		&__info{

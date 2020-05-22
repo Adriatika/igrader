@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	var article 		= $('.singleArticle');
 	var articleHeight 	= $('.singleArticle').outerHeight();//высота статьи
@@ -10,7 +9,7 @@ $(document).ready(function(){
 	console.log("x = "+x);
 	$(window).scroll(function(){
 		//Start upArrow
-		if(($(window).scrollTop() >= 350) && ($(window).scrollTop()< x)){
+		if(($(window).scrollTop() >= 350)){
 			up.fadeIn(750);
 			}
 			else{

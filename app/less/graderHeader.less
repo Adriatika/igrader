@@ -1,10 +1,13 @@
 @import "vars.less";
 .graderHeader{
 	width:100%;
-	max-width: 100%;
+	max-width:100%;
 	box-sizing:border-box;
-	overflow: hidden;
-	margin-bottom: 2em;
+	margin-bottom:2em;
+	& a{
+		font-weight:700;
+		font-family: 'Roboto', sans-serif;
+	}
 	& .navbar{
 		background-color: #24363c;
 	}
@@ -24,8 +27,12 @@
 .graderLogo{
 	background-color:rgba(221,229,232,1);
 	background-size:cover;
-	padding:0px 0 15px;
+	padding:15px 0 15px;
 	position: relative;
+	color:#24363c;
+	margin-bottom: 1.5em;
+	
+	font-size: 1.5em;
 	&::after{
 		display:block;
 		position: absolute;
@@ -41,17 +48,16 @@
 			width:20%;
 		}
 	&__title{
-		text-transform: uppercase;
-		position: relative;
+		display:inline-block;
+		position:relative;
 		text-align: left;
-		margin-bottom: 3.5em;
-		color:#dde5e8;
+		font-weight:700;font-family: 'Roboto', sans-serif;
 	}
 	&__description{
-		display: flex;
-		font-family: 'Acrobat','Roboto', sans-serif;
-		text-align: left;
-		color:#24363c;
+		display: inline-block;
+		font-size: 0.9em;
+		font-weight:400;font-family: 'Roboto', sans-serif;
+		
 	}
 }
 .navbar-nav>li>.dropdown-menu{
@@ -149,6 +155,7 @@
 	font-weight:600;
 	font-size: 14px;
 	text-transform: uppercase;
+	max-width: 100vw;
 	& a{
 
 	font-weight:600;
