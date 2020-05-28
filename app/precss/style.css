@@ -868,6 +868,9 @@ iframe {
   .searchIcon {
     right: 60px;
   }
+  .navbar-nav {
+    margin: 0!important;
+  }
 }
 @media all and (max-width: 480px) {
   .car__slide {
@@ -1513,6 +1516,7 @@ textarea:active {
 }
 .mainPhotoBlock__text {
   font-size: 16px;
+  font-family: 'Roboto', 'Acrobat', sans-serif;
 }
 .mainPhotoBlock__title {
   font-size: 22px;
@@ -1556,7 +1560,8 @@ textarea:active {
   padding-top: 5px;
 }
 .mainMini__info p {
-  font-weight: 800;
+  font-family: 'Roboto', 'Acrobat', sans-serif;
+  font-weight: 400;
   min-height: 36px;
   font-size: 16px;
 }
@@ -1659,6 +1664,20 @@ textarea:active {
   position: relative;
   z-index: 1;
 }
+.add__menu .nav .open > a,
+.add__menu .nav .open > a:focus,
+.add__menu .nav .open > a:hover,
+li.dropdown a,
+li.dropdown {
+  background-color: transparent!important;
+}
+.add__menu .navbar-nav > li > .dropdown-menu {
+  background-color: #dde5e8;
+  border: 1px solid #dde5e8;
+}
+.add__menu .navbar-nav > li > .dropdown-menu a {
+  color: #333333;
+}
 .add__menu .row {
   margin-bottom: 0;
 }
@@ -1731,6 +1750,13 @@ textarea:active {
   }
   .graderHeader .navbar-expand .umpalumpa:hover a {
     color: black!important;
+  }
+  .add__menu .navbar-nav > li > .dropdown-menu {
+    background-color: #24363c;
+    border: none;
+  }
+  .add__menu .navbar-nav > li > .dropdown-menu a {
+    color: #fff;
   }
 }
 @media all and (max-width: 576px) {
@@ -2197,7 +2223,7 @@ main > p a:hover {
 }
 .sharing a {
   display: inline-block;
-  background-color: #0b1538;
+  background-color: #999999;
   width: 30px;
   height: 32px;
   padding: 3px;
@@ -2804,6 +2830,23 @@ main > p a:hover {
   }
 }
 
+.slideNews .img__wrapper {
+  padding-top: 70.6%;
+  position: relative;
+  overflow: hidden;
+}
+.slideNews .img__wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slideNews p {
+  padding-top: 10px;
+  font-family: 'Roboto', 'Acrobat', sans-serif;
+}
+.slideNews {
+  margin-bottom: 1.5em;
+}
 .sliderOnce__slide a {
   width: 100%;
   position: relative;
@@ -4437,96 +4480,29 @@ main {
 }
 
 
-.vrtTw__anchor {
+.vrtTw .field__title {
+  font-size: 1.4em;
+  font-family: 'Roboto', 'Acrobat', sans-serif;
+  font-weight: 700;
+}
+.vrtTw__news {
   display: block;
   margin-bottom: 1.5em;
-  position: relative;
-}
-.vrtTw__heading {
-  display: inline-block;
-  padding: 3px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: white!important;
-  text-transform: uppercase;
-  font-weight: 700;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #24363c;
-  z-index: 2;
-}
-.vrtTw__date {
-  font-size: 12px;
-  color: #666;
-  text-transform: lowercase;
 }
 .vrtTw__title {
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 18px;
+  display: block;
+  font-family: 'Roboto', 'Acrobat', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.2em;
 }
-@media all and (max-width: 1199px) {
-  .vrtTw__title {
-    font-size: 22px;
-    line-height: 30px;
-    color: #ffffff;
-  }
-  .vrtTw__anchor {
-    margin-bottom: 2em;
-    position: relative;
-  }
-  .vrtTw__anchor::before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    content: '';
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .vrtTw__date {
-    color: #999999;
-  }
-  .vrtTw__info {
-    position: absolute;
-    display: block;
-    width: 50%;
-    min-width: 300px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    top: 2em;
-    left: 2.5em;
-    padding: 1em;
-    border: 2px solid #ffffff;
-    -webkit-border-radius: 10px;
-            border-radius: 10px;
-    z-index: 3;
-  }
+.vrtTw__title:hover {
+  color: #f90;
 }
-@media all and (max-width: 768px) {
-  .vrtTw__info {
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    border: 0;
-    max-height: 90px;
-    top: calc(100% - 90px);
-    -webkit-border-radius: 0;
-            border-radius: 0;
-    background-color: rgba(12, 12, 12, 0.2);
-  }
-  .vrtTw__title {
-    font-size: 17px;
-    line-height: 22px;
-  }
-}
-@media all and (max-width: 480px) {
-  .vrtTw__info {
-    max-height: 110px;
-    top: calc(100% - 110px);
-  }
+.vrtTw__date {
+  display: block;
+  text-align: right;
+  font-size: 0.9em;
+  color: #cccccc;
 }
 
 .widgettitle {

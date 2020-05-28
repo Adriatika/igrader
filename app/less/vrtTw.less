@@ -1,96 +1,28 @@
 @import "vars.less";
 .vrtTw{
-	&__anchor{
-		display: block;
-		margin-bottom:1.5em;
-		position:relative;
-	}
-	&__heading{
-		display:inline-block;
-		padding:3px 10px;
-		box-sizing:border-box;
-		color:white!important;
-		text-transform:uppercase;
+	& .field__title{
+		font-size: 1.4em;
+		font-family:'Roboto', 'Acrobat', sans-serif;
 		font-weight:700;
-		position:absolute;
-		top:0;
-		left:0;
-		background-color:#24363c;
-		z-index:2;
 	}
-	&__date{
-		font-size: 12px;
-		color:#666;
-		text-transform: lowercase;
+	&__news{
+		display: block;
+		margin-bottom: 1.5em;
 	}
 	&__title{
-		font-size:16px;
-		font-weight: 800;
-		line-height:18px;
-	}
-}
-@media all and(max-width:1199px){
-	.vrtTw{
-		&__title{
-			font-size: 22px;
-			line-height:30px;
-			color:#ffffff;
-		}
-		&__anchor{
-			margin-bottom: 2em;
-			position: relative;
-			&::before{
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top:0;
-				left:0;
-				z-index: 2;
-				content: '';
-				background-color: rgba(0,0,0,0.5);
-			}
-		}
-		&__date{
-			color:#999999;
-		}
-		&__info{
-			position: absolute;
-			display:block;
-			width:50%;
-			min-width:300px;
-			box-sizing: border-box;
-			top:2em;
-			left:2.5em;
-			padding:1em;
-			border:2px solid #ffffff;
-			border-radius:10px;
-			z-index: 3;
+		display: block;
+		font-family: 'Roboto','Acrobat', sans-serif;
+		font-size: 1.1em;
+		line-height: 1.2em;
+		&:hover{
+			color:#f90;
 		}
 	}
-}
-@media all and(max-width: 768px){
-	.vrtTw{
-		&__info{
-			width:100%;
-			bottom:0;
-			left:0;
-			border:0;
-			max-height:90px;
-			top:calc(100% - 90px);			
-			border-radius:0;
-			background-color: rgba(12,12,12,0.2);
-		}
-		&__title{
-			font-size: 17px;
-			line-height: 22px;
-		}
-	}
-}
-@media all and(max-width: 480px){
-	.vrtTw{
-		&__info{
-			max-height:110px;
-			top:calc(100% - 110px);
-		}
+	&__date{
+		display: block;
+		text-align: right;
+		font-size:0.9em;
+		color:#cccccc;
+
 	}
 }
