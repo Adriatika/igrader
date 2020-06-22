@@ -36,13 +36,13 @@
 					<ul class="nav navbar-nav navbar-collapse collapse">
 						<li class=""><a href="taxonomy-mining.html">О журнале</a></li>
 						<li><a href="single.html">Новости</a></li>
-						<li><a href="404.html">Архив</a></li>
+						<li><a href="category.html">Архив</a></li>
 						<li class="dropdown" >
 							<a href="taxonomy-series.html" class="dropdown-toggle" data-toggle="dropdown">круто длинно и т.д.
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-						       <li><a href="single-event.html">Ссылка</a></li>
+						       <li><a href="taxonomy.html">Ссылка</a></li>
 						       <li><a href="search.html">Ссылка</a></li>
 						       <li><a href="category.html">Ссылка</a></li>
 						    </ul>
@@ -105,12 +105,47 @@
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt harum nostrum ipsam assumenda, corporis, beatae quibusdam eos magni praesentium quia laborum fuga omnis soluta
 									<span class="mainPhotoBlock__eye"><i class="fa fa-eye"></i> 123</span>
 							</p>
-
+						</div>
+					</a>
+					<a href="single.html" class="mainPhotoBlock__anchor">
+						<div class="imgMy">
+						<img src="https://picsum.photos/800/600/?random=12" alt="someimg" class="mainPhotoBlock__img">
+						<h2 class="mainPhotoBlock__title">На хвостохранилище в Бразилии произошла катастрофическая авария  </h2>
+						</div>
+						<div class="mainPhotoBlock__info">
+							<div class="mainPhotoBlock__row">
+								<span class="mainPhotoBlock__date">14.01.2020</span>
+								<span class="mainPhotoBlock__heading">металлы и руды</span>
+								
+							</div>
+						
+							<p class="mainPhotoBlock__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt harum nostrum ipsam assumenda, corporis, beatae quibusdam eos magni praesentium quia laborum fuga omnis soluta
+									<span class="mainPhotoBlock__eye"><i class="fa fa-eye"></i> 123</span>
+							</p>
+						</div>
+					</a>
+					<a href="single.html" class="mainPhotoBlock__anchor">
+						<div class="imgMy">
+						<img src="https://picsum.photos/800/600/?random=14" alt="someimg" class="mainPhotoBlock__img">
+						<h2 class="mainPhotoBlock__title">На хвостохранилище в Бразилии произошла катастрофическая авария  </h2>
+						</div>
+						<div class="mainPhotoBlock__info">
+							<div class="mainPhotoBlock__row">
+								<span class="mainPhotoBlock__date">14.01.2020</span>
+								<span class="mainPhotoBlock__heading">металлы и руды</span>
+								
+							</div>
+						
+							<p class="mainPhotoBlock__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt harum nostrum ipsam assumenda, corporis, beatae quibusdam eos magni praesentium quia laborum fuga omnis soluta
+									<span class="mainPhotoBlock__eye"><i class="fa fa-eye"></i> 123</span>
+							</p>
 						</div>
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-12 vrtTw">
-					<h2 class="field__title">Новости</h2>
+					<h2 class="field__title"><a href="#" class="vrtTw__newsLink">Новости</a></h2>
 					<a href="#" class="vrtTw__news">
 						<p class="vrtTw__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, voluptatum.</p>
 						<span class="vrtTw__date">20.20.2020</span>
@@ -193,12 +228,34 @@
 			</div>
 		</div>
 	</div>
+	<div class="">
+		<div class="mainthemes">
+			<span class="mainthemes__title">
+				Все материалы по теме
+			</span>
+			<ul class="mainthemes__list">
+				<li><a href="#">Дорожно-строительная техника</a></li>
+				<li><a href="#">Грузоперевозки</a></li>
+				<li><a href="#">Озеленение Луны</a></li>
+				<li><a href="#">На лечение</a></li>
+				<li><a href="#">Логистика и склад</a></li>
+				<li><a href="#">Комтранс 2019</a></li>
+				<li><a href="#">Коммерческий транспорт</a></li>
+				<li><a href="#">Строительство и обслуживание дорог</a></li>
+				<li><a href="#">Техника  специального назначения</a></li>
+				<li><a href="#">Коммунальная техника</a></li>
+				<li><a href="#">Пассажирский транспорт</a></li>
+				<li><a href="#">Подъемная техника</a></li>
+				<li><a href="#">Прицепная техника</a></li>
+			</ul>
+		</div>
+	</div>
 	<div class="graderLogo col-lg-12">
 			<div class="container">
 				<h1 class="graderLogo__title">igrader </h1>
 				<h2 class="graderLogo__description">- журнал о спецтехнике и прочих крутых штуках</h2>
 			</div>
-		</div>
+	</div>
 	<div class="row">
 		<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
 			<h2 class="field__title"><a href="#">Новости</a></h2>
@@ -617,6 +674,16 @@
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
+    	$('.mainPhotoBlock').slick({
+    		arrows:true,
+    		dots:false,
+  			infinite: true,
+  			autoplay:true,
+        	autoplaySpeed:2000,
+  			speed: 500,
+  			fade: true,
+  			cssEase: 'linear'
+    		});
       $('.car').slick({
         dots: false,
   		infinite:true,
