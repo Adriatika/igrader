@@ -4,7 +4,6 @@
 	max-width:100%;
 	box-sizing:border-box;
 	margin-bottom:2em;
-	overflow:auto;
 	& a{
 		font-weight:700;
 		font-family: 'Roboto', sans-serif;
@@ -173,6 +172,11 @@
 	}
 	& .navbar-nav{
 		margin:0!important;
+	}
+}
+@media all and(max-width:576px){
+	.graderHeader{
+		overflow:auto;
 	}
 }
 @media all and(max-width:480px){
