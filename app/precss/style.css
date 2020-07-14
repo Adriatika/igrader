@@ -2275,6 +2275,63 @@ main > p a:hover {
   color: #8f9ea4;
 }
 
+.riders {
+  margin-bottom: 1.5em;
+}
+.riders__main {
+  display: block;
+  margin-bottom: 1.5em;
+}
+.riders__main img {
+  margin-bottom: 1em;
+}
+.riders__main:hover .riders__title {
+  color: #f90;
+}
+.riders__title {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+.riders__row {
+  margin-bottom: 1em;
+}
+.riders__row a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.riders__row a:hover span {
+  color: #f90;
+}
+.riders__row a img {
+  width: 100px;
+  margin-right: 10px;
+  height: 70px;
+}
+.riders__mTitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+}
+.riders__deco {
+  margin-top: 10px;
+}
+.riders__deco::after {
+  display: block;
+  content: '';
+  height: 1px;
+  background-color: rgba(143, 158, 164, 0.8);
+}
+
 
 .sector2 {
   display: block;

@@ -1,0 +1,54 @@
+@import "vars.less";
+.riders{
+	&__main{
+		display: block;
+		margin-bottom: 1.5em;
+		& img{
+			margin-bottom:1em;
+			
+		}
+		&:hover .riders__title{
+			color:#f90;
+				}
+	}
+	&__title{
+		font-weight:bold;
+		font-family: 'Roboto', sans-serif;
+
+	}
+	margin-bottom:1.5em;
+	&__row{
+		margin-bottom:1em;
+		& a{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&:hover span{
+			color:#f90;
+
+		}
+			& img{
+				width:100px;
+				margin-right:10px;
+				height:70px;
+			}
+		}
+	}
+	&__mTitle{
+		font-family: 'Roboto', sans-serif;
+		font-size: 0.9em;
+	}
+	&__deco{
+		margin-top:10px;
+		&::after{
+			display: block;
+			content: '';
+			height:1px;
+			background-color: lighten(@ArticleDate, 10%);
+		}
+	}
+	
+}
+@media all and(max-width: 576px){
+	
+}
